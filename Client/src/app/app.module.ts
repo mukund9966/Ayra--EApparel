@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { ShopModule } from './shop/shop.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { CartModule } from './cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     CoreModule,
     ShopModule,
     HomeModule,
-NgxSpinnerModule
+NgxSpinnerModule,
+CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

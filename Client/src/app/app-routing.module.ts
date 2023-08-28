@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductDetailsComponent } from './shop/product-details/product-details.component';
 import { BasketComponent } from './basket/basket.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path:'shop/:id', component:ProductDetailsComponent},
   // using lazy
   { path: 'basket', component: BasketComponent },
+  {path:'checkout', component:CheckoutComponent},
     // {path:'shop', loadChildren: () => import('./shop/shop.module').then(mod => mod.ShopModule)},
   {path:'**', redirectTo:'', pathMatch:'full'},
 

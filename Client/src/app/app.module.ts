@@ -11,6 +11,7 @@ import { ShopModule } from './shop/shop.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { Basket } from './shared/model/basket';
 import { BasketModule } from './basket/basket.module';
+import { CheckoutModule } from './checkout/checkout.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BasketModule } from './basket/basket.module';
     ShopModule,
     HomeModule,
 NgxSpinnerModule,
-BasketModule
+BasketModule,
+CheckoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

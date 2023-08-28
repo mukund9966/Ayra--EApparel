@@ -9,6 +9,7 @@ import { Product } from 'src/app/shared/model/product';
 })
 export class ProductItemComponent {
   @Input() product?: Product;
+quantityInCart: any;
 
 constructor(private basketService: BasketService) { 
 }

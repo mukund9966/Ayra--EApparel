@@ -22,3 +22,9 @@ export class Basket implements Basket{
 
     items: BasketItem[] = [];
 }
+
+export interface IBasketTotals {
+    shipping: number;
+    subtotal: number;
+    total: number;
+}

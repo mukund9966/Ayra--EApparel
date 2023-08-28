@@ -9,7 +9,8 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { ShopModule } from './shop/shop.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { CartModule } from './cart/cart.module';
+import { Basket } from './shared/model/basket';
+import { BasketModule } from './basket/basket.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { CartModule } from './cart/cart.module';
     ShopModule,
     HomeModule,
 NgxSpinnerModule,
-CartModule
+BasketModule
   ],
   providers: [],
   bootstrap: [AppComponent]

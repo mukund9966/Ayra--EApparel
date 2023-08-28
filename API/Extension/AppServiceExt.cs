@@ -13,7 +13,6 @@ namespace API.Extension
     public static class AppServiceExt
     {
         public static IServiceCollection applicationServices(this IServiceCollection services, IConfiguration config){
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();
 services.AddDbContext<StoreContext>(opt => 

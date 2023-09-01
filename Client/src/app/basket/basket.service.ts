@@ -11,6 +11,8 @@ export class BasketService {
   baseUrl = 'http://localhost:5001/api/';
 
   // baseUrl = 'enviroment.apiUrl'
+
+  // creating own observable
   private basketSource = new BehaviorSubject<Basket | null>(null);
   basket$ = this.basketSource.asObservable();
   
@@ -117,6 +119,7 @@ export class BasketService {
     if(!basket) return;
 
       const shipping = 0;
+      // meaning of below code
       const subtotal = basket.items.reduce((a,b) => (b.price * b.quantity) + a, 0);
       const total = shipping + subtotal;
       this.basketTotalSource.next({shipping, total, subtotal});

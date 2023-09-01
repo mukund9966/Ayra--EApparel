@@ -47,7 +47,7 @@ getProducts() {
 
 getBrands() {
   this.shopService.getBrands().subscribe((response:any) => {
-    this.brands = [{id: 0, name: 'All'}, ...response];
+    this.brands = [{id: 0, name: 'All'}, ...response];  //get all brands
   }, error => {
     console.log(error);
   })

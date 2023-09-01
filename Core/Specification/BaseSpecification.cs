@@ -12,6 +12,7 @@ namespace Core.Specification
         {
         }
 
+// criteria is the expression that we want to evaluate, eg: x => x.Id == id
         public BaseSpecification(Expression<Func<T, bool>> criteria)
         {   
             Criteria = criteria; 
@@ -20,21 +21,19 @@ namespace Core.Specification
 
         public Expression<Func<T, bool>> Criteria {get;}
 
-        public List<Expression<Func<T, object>>> Includes {get;} = 
-            new List<Expression<Func<T, object>>>();
+        public List<Expression<Func<T, object>>> Includes {get;} =  new List<Expression<Func<T, object>>>(); //initialize the list  to empty
 
         public Expression<Func<T, object>> OrderBy {get; private set;}
 
         public Expression<Func<T, object>> OrderByDescending {get; private set;}
 
-        public int Take {get; private set;}
+        // public int Take {get; private set;}
 
-        public int Skip {get; private set;}
+        // public int Skip {get; private set;}
 
-        public bool IsPagingEnabled {get; private set;}
+        // public bool IsPagingEnabled {get; private set;}
 
-        // We are going to add a method to add includes to our list
-
+        // adding a method to add includes to our list
         protected void AddInclude(Expression<Func<T, object>> includeExpression)
         {
             Includes.Add(includeExpression);
@@ -49,12 +48,12 @@ namespace Core.Specification
             OrderByDescending = orderByDescExpression;
         }
 
-        protected void ApplyPaging(int skip, int take)
-        {
-            Skip = skip;
-            Take = take;
-            IsPagingEnabled = true;
+        // protected void ApplyPaging(int skip, int take)
+        // {
+        //     Skip = skip;
+        //     Take = take;
+        //     IsPagingEnabled = true;
 
-        }
+        // }
     }
 }

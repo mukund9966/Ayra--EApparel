@@ -22,6 +22,9 @@ namespace API.Controllers
         }
 
         [HttpGet]
+
+
+
         public async Task<ActionResult<List<Product_To_Return>>> GetProducts(
             [FromQuery]ProductSpecificationParams productParams)
         {
